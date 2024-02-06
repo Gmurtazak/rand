@@ -6,16 +6,16 @@
      Guess the Number
  <?php
 
- if (isset($_POST[" submitButton" ]) and isset($_POST[" guess" ])) {
+ if (isset($_POST["submitButton" ]) and isset($_POST["guess" ])) {
    processForm();
  } else {
    displayForm(rand(1, 100));
  }
 
  function processForm() {
-   $number = (int)$_POST[" number" ];
-   $guessesLeft = (int)$_POST[" guessesLeft" ]-1;
-   $guess = (int)$_POST[" guess" ];
+   $number = (int)$_POST["number" ];
+   $guessesLeft = (int)$_POST["guessesLeft" ]-1;
+   $guess = (int)$_POST["guess" ];
 
    if ($guess == $number) {
      displaySuccess($number);
